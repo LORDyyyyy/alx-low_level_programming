@@ -1,12 +1,9 @@
 #include <stdio.h>
 
 /*
- * main - Entry point
+ * main - a C program that prints the size of various types on the compute
  *
  * Return: Always 0 (Sucess)
- */
- /*
- * a C program that prints the size of various types on the compute
  */
 int main(void)
 {
