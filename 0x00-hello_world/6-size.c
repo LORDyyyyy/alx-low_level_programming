@@ -5,6 +5,9 @@
  *
  * Return: Always 0 (Sucess)
  */
+ /*
+ * a C program that prints the size of various types on the compute
+ */
 int main(void)
 {
 	printf("Size of a char: %d byte(s)\n", sizeof(char));
