@@ -1,7 +1,9 @@
 #include <stdio.h>
 
-/*
- * main - a C program that prints the size of various types on the compute
+/**
+ * main - Entry point
+ *
+ * Description: prints  the size of various types
  *
  * Return: Always 0 (Sucess)
  */
