@@ -4,7 +4,7 @@
  * main - entry point
  * Return: 0
  */
-int main(void);
+int main(void)
 {
 	unsigned long long f = 0, s = 1, i, t;
 
