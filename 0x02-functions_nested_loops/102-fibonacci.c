@@ -17,5 +17,6 @@ int main(void)
 		if (i != 50)
 			printf(", ");
 	}
+	printf("\n");
 	return (0);
 }
