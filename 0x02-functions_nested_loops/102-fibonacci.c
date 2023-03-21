@@ -6,15 +6,15 @@
  */
 int main(void)
 {
-	unsigned long long f = 0, s = 1, i, t;
+	long f = 0, s = 1, i, t;
 
-	for (i = 1; i <= 50; i++)
+	for (i = 1; i < 50; i++)
 	{
 		t = f + s;
-		printf("%llu", t);
+		printf("%ld", t);
 		f = s;
 		s = t;
-		if (i != 50)
+		if (i != 49)
 			printf(", ");
 	}
 	return (0);
