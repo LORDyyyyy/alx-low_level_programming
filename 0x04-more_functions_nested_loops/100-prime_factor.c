@@ -8,8 +8,8 @@ int main(void)
 {
 	long x = 612852475143, i, j;
 	int flag = 1;
-	
-	for (i = x/10000; i > 0; i--)
+
+	for (i = x / 10000; i > 0; i--)
 	{
 		if (x % i == 0)
 		{
