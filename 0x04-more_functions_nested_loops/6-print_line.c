@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_line - print _ 
+ * print_line - print _
  * @n: number of spaces
  * Return: void
  */
