@@ -9,14 +9,15 @@
 char *rot13(char *str)
 {
 	int i, j;
-	char am[] = "AaBbCcDdEeFfGgHhIiJjKkLlMm";
-	char nz[] = "NnOoPpQqRrSsTtUuVvWwXxYyZz";
-
+	char am[] = "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz";
+	char nz[] = "NnOoPpQqRrSsTtUuVvWwXxYyZzAaBbCcDdEeFfGgHhIiJjKkLlMm";
+	
 	for (i = 0; str[i]; i++)
-		for (j = 0; j < 26; j++)
+		for (j = 0; j < 52; j++)
 			if (str[i] == am[j])
+			{
 				str[i] = nz[j];
-			else if (str[i] == nz[j])
-				str[i] = am[j];
+				break;
+			}
 	return (str);
 }
