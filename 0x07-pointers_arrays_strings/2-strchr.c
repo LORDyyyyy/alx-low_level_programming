@@ -13,13 +13,6 @@ char *_strchr(char *s, char c)
 
 	for (i = 0; s[i]; i++)
 		if (s[i] == c)
-		{
-			loc = i;
-			flag = 1;
-			break;
-		}
-	if (flag)
-		return (s + loc);
-	else
-		return ('\0');
+			return (s + i);
+	return (NULL);
 }
