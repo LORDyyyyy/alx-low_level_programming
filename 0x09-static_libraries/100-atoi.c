@@ -1,6 +1,11 @@
 #include "main.h"
 
-
+/**
+ * _atoi - main
+ * @s: string
+ *
+ * Return: 0
+ */
 int _atoi(char *s)
 {
 	unsigned int num = 0;
@@ -14,6 +19,5 @@ int _atoi(char *s)
 		else if (num > 0)
 			break;
 	} while (*s++);
-
 	return (num * sign);
 }
