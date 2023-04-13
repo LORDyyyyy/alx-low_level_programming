@@ -31,7 +31,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	size1 = slen(s1);
 	size2 = slen(s2);
-
+	if (s1 == NULL)
+		size1 = 0;
+	if (s2 == NULL)
+		size2 = 0;
 	if (n >= size2)
 		n = size2;
 
