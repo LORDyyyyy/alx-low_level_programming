@@ -28,8 +28,6 @@ int main(int argc, char **argv)
 	}
 
 	while (i--)
-		printf("%02hhx ", *p++);
-
-	printf("\n");
+		printf("%02hhx%s", *p++, (b) ? " " : "\n");
 	return (0);
 }
