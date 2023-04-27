@@ -1,8 +1,7 @@
-global _start
-
 section .text
+global main
 
-_start:
+main:
 	MOV rax, 1
 	MOV rdi, 1
 	MOV rsi, msg
@@ -13,6 +12,6 @@ _start:
 	MOV rdi, 0
 	SYSCALL
 
-section .data
+section .rodata
 	msg: DB "Hello, Holberton", 10
 	msglen: EQU $ - msg
