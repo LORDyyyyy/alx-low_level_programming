@@ -8,11 +8,10 @@
  */
 size_t print_list(const list_t *h)
 {
-	const list_t *p = h;
-	int count = 0;
+	size_t count = 0;
 
 	if (h == NULL)
-		return (-1);
+		return (0);
 
 	while (p)
 	{
