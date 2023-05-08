@@ -50,6 +50,7 @@ int main(int ac, char **av)
 
 	f_from = open(av[1], O_RDONLY);
 	f_to = open(av[2], O_WRONLY | O_CREAT | O_TRUNC | O_APPEND, 0664);
+	err_from_to(f_from, f_to, 0, av);
 
 	while (r == BUF)
 	{
