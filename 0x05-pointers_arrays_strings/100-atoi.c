@@ -3,7 +3,7 @@
 
 int _atoi(char *s)
 {
-	unsigned int sum = 0;
+	unsigned int num = 0;
 	int sign = 1;
 
 	do {
