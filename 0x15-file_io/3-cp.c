@@ -7,9 +7,9 @@
  * @check_close: checks if there is an error happened when closing a file
  * @av: argument list contains the file names
  *
- * Return: void
+ * Return: 0
  */
-void err_from_to(int check_from, int check_to, int check_close, char **av)
+int err_from_to(int check_from, int check_to, int check_close, char **av)
 {
 	if (check_from == -1)
 	{
@@ -28,6 +28,7 @@ void err_from_to(int check_from, int check_to, int check_close, char **av)
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", check_close);
 		exit(100);
 	}
+	return (0);
 }
 /**
  * main - entry point
@@ -38,7 +39,7 @@ void err_from_to(int check_from, int check_to, int check_close, char **av)
  */
 int main(int ac, char **av)
 {
-	int f_from, f_to, r = BUF, w;
+	int f_from, f_to, r = BUF, w, err = 0;
 	char buffer[BUF];
 
 	if (ac != 3)
@@ -59,10 +60,11 @@ int main(int ac, char **av)
 		err_from_to(0, w, 0, av);
 	}
 
-	close(f_from);
-	err_from_to(0, 0, f_from, av);
+	err = close(f_from);
+	err == -1 ? err_from_to(0, 0, f_from, av) : 0;
 
-	close(f_to);
-	err_from_to(0, 0, f_to, av);
+	err = close(f_to);
+	err == -1 ? err_from_to(0, 0, f_to, av) : 0;
+
 	return (0);
 }
