@@ -13,7 +13,7 @@ int err_from_to(int check_from, int check_to, int check_close, char **av)
 {
 	if (check_from == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s", av[1]);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]);
 		exit(98);
 	}
 
