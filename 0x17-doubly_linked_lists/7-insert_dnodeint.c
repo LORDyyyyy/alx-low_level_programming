@@ -22,18 +22,19 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		tmp = add_dnodeint(h, n);
 		return (tmp);
 	}
-	if (idx == dlistint_len(hh) - 1)
-	{
-		tmp = add_dnodeint_end(h, n);
-		return (tmp);
-	}
 	while (hh)
 	{
 		if (idx == count)
 		{
-			tmp = malloc(sizeof(dlistint_t));
-			if (tmp)
+			if (!hh->next)
 			{
+				tmp = add_dnodeint_end(h, n);
+			}
+			else
+			{
+				tmp = malloc(sizeof(dlistint_t));
+				if (!tmp)
+					return (NULL);
 				tmp->n = n;
 				tmp->next = hh->next;
 				tmp->prev = hh;
