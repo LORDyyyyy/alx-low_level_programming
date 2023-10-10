@@ -1,7 +1,7 @@
 #ifndef SEARCH_ALGOS
 #define SEARCH_ALGOS
 
-#include <sdio.h>
+#include <stdio.h>
 #include <stdlib.h>
 
 
