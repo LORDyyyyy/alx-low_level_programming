@@ -26,7 +26,9 @@ int jump_search(int *array, size_t size, int value)
 	}
 
 	printf("Value found between indexes [%lu] and [%lu]\n", i, m);
-	for (x = i; x <= m && x < size; x++)
+
+	m = (m >= size - 1) ? size - 1 : m;
+	for (x = i; x <= m; x++)
 	{
 		printf("Value checked array[%lu] = [%d]\n", x, array[x]);
 		if (array[x] == value)
