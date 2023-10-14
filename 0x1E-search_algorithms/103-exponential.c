@@ -3,9 +3,11 @@
 
 /**
  * binary_search_rl - searches for a value in a sorted array of integers
+ * in a specific range
  * @array: sorted array of integers
- * @size: array size
  * @value: the value to search for
+ * @left: where to start from left
+ * @right: where to start from right
  *
  * Return: index if found, -1 otherwise
  */
@@ -53,10 +55,11 @@ int exponential_search(int *array, size_t size, int value)
 	while (i < size && array[i] <= value)
 	{
 		printf("Value checked array[%lu] = [%d]\n", i, array[i]);
-        	i = i*2;
+		i = i * 2;
 	}
 
-	printf("Value found between indexes [%lu] and [%lu]\n", i / 2, MIN(i, size - 1));
+	printf("Value found between indexes [%lu] and [%lu]\n",
+			i / 2, MIN(i, size - 1));
 
 	return (binary_search_rl(array, value, i / 2, MIN(i, size - 1)));
 }
