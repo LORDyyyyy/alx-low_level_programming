@@ -1,7 +1,7 @@
 # C - Low Level Programming and Algorithms
 
 
-<img src="https://bs-uploads.toptal.io/blackfish-uploads/components/blog_post_page/content/cover_image_file/cover_image/1309974/retina_1708x683_cover-0828_AfterAllTheseYearstheWorldisStillPoweredbyCProgramming_Razvan_Newsletter-2b9ea38294bb08c5aea1f0c1cb06732f.png">
+<img src="https://media.geeksforgeeks.org/wp-content/uploads/20230506112814/C-Programming-Language.png" style="width: 100%">
 
 ***
 
